@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 
 
 
-function Balance({ user, addr, abi ,info}) {
+function Balance({ user, addr, abi }) {
   
   const [green, setGreen] = useState(0);
   const [green2, setGreen2] = useState(0);
