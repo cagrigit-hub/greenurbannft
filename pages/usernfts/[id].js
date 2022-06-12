@@ -22,17 +22,29 @@ function Mynfts() {
   const user = router.query.id;
 
   const array = [
-    { color: "bg-green-200", val: green },
-    { color: "bg-green-500", val: green2 },
-    { color: "bg-green-700", val: green3 },
-    { color: "bg-yellow-200", val: yellow },
-    { color: "bg-yellow-500", val: yellow2 },
-    { color: "bg-yellow-700", val: yellow3 },
-    { color: "bg-blue-200", val: blue },
-    { color: "bg-blue-500", val: blue2 },
-    { color: "bg-blue-700", val: blue3 },
-    { color: "bg-purple-500", val: recycler },
+    { id: 0, val: green },
+    { id: 1, val: green2 },
+    { id: 2, val: green3 },
+    {  id:3, val: yellow },
+    {  id: 4, val: yellow2 },
+    {  id: 5, val: yellow3 },
+    { id: 6, val: blue },
+    { id: 7, val: blue2 },
+    { id: 8, val: blue3 },
+    {  id: 9, val: recycler },
   ];
+
+  const img_array = ["https://raw.githubusercontent.com/cagrigit-hub/images/main/1.png",
+  "https://raw.githubusercontent.com/cagrigit-hub/images/main/2.png",
+  "https://raw.githubusercontent.com/cagrigit-hub/images/main/3.png",
+  "https://raw.githubusercontent.com/cagrigit-hub/images/main/4.png",
+  "https://raw.githubusercontent.com/cagrigit-hub/images/main/5.png",
+  "https://raw.githubusercontent.com/cagrigit-hub/images/main/6.png",
+  "https://raw.githubusercontent.com/cagrigit-hub/images/main/7.png",
+  "https://raw.githubusercontent.com/cagrigit-hub/images/main/8.png",
+  "https://raw.githubusercontent.com/cagrigit-hub/images/main/9.png",
+  "https://raw.githubusercontent.com/cagrigit-hub/images/main/10.jpg",
+  ]
 
   async function getBalances() {
     const addr = "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0";
@@ -82,6 +94,16 @@ function Mynfts() {
         {array.map((item, i) => (
           
           <>
+            {!item.val && i === 0 &&(
+              
+              <>
+
+              <div></div>
+              <div className='flex justify-center items-center text-center text-4xl'>YOU DO NOT HAVE ANY NFT 😥</div>
+              <div></div>
+              </>
+            )}
+
             {i !== array.length - 1 && item.val !== 0 && (
               <div
                 key={i}
@@ -89,10 +111,10 @@ function Mynfts() {
                
                 className={
                   item.color +
-                  "  w-40 h-40 flex justify-center items-center text-center "
+                  " flex justify-center items-center text-center "
                 }
               >
-                
+                <img className=' w-40 h-40' src={img_array[i]} />
             
                   
                
@@ -108,11 +130,12 @@ function Mynfts() {
              
                   className={
                     item.color +
-                    "  w-40 h-40 flex justify-center items-center text-center "
+                    " flex justify-center items-center text-center "
                   
                   }
                  
                 >
+                  <img className=' w-40 h-40' src={img_array[i]} />
                   <div className="flex flex-col space-y-2">
                   
                 </div>

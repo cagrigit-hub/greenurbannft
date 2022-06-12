@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 
 
 
-function Balance({ user, addr, abi }) {
+function Balance({ user, addr, abi} ) {
   
   const [green, setGreen] = useState(0);
   const [green2, setGreen2] = useState(0);
@@ -147,16 +147,16 @@ function Balance({ user, addr, abi }) {
         GET NFTS
       </button>
       <div className="grid grid-cols-3 gap-4 f">
-        {info.map((item, i) => (
+        {array.map((item, i) => (
           <>
-            {i !== info.length - 1 && (
+            {i !== array.length - 1 && (
               <div
                 
                 key={i}
                 id={i}
                 onClick={convert}
                 className={
-                  
+                  item.color +
                   "  w-40 h-40 flex justify-center items-center text-center hover:cursor-pointer"
                 }
                 onMouseEnter={(e) => {
