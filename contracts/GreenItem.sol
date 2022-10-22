@@ -15,43 +15,12 @@ contract GreenItem is ERC1155Burnable {
     uint256 public constant GREENL3 = 6;
     uint256 public constant YELLOWL3 = 7;
     uint256 public constant BLUE3 = 8;
-
+    baseUrl = "https://bafkreibj5sfqv3ocoztws4s2sedmveirfu2cajejwmkfvjyvzbbijzjqs4.ipfs.nftstorage.link/";
     mapping(uint256 => string) private _tokenURIs;
     // ultimate token
     uint256 public constant RECYCLER = 9;
 
-    constructor() public ERC1155("GreenNFT GN") {
-        _tokenURIs[
-            0
-        ] = "https://bafkreibj5sfqv3ocoztws4s2sedmveirfu2cajejwmkfvjyvzbbijzjqs4.ipfs.nftstorage.link/";
-        _tokenURIs[
-            1
-        ] = "https://bafkreiauxxb4cvprvxwjy7u3uxt24x5yxvujabkpdkkjwop4lcdfao3mxq.ipfs.nftstorage.link/";
-        _tokenURIs[
-            2
-        ] = "https://bafkreibnlspgsq4cpwfthz2npfllios2fivzt24lzgxn465qye63tdogmu.ipfs.nftstorage.link/";
-        _tokenURIs[
-            3
-        ] = "https://bafkreif2mhzmwstndyebzc5zkaceb5w2vqod3rcxxbr7glmevl4jhzxo2q.ipfs.nftstorage.link/";
-        _tokenURIs[
-            4
-        ] = "https://bafkreie6p65255ehx6wucthjmewmr5tyrt2o2iv3vc7igcrc5mqeixwpty.ipfs.nftstorage.link/";
-        _tokenURIs[
-            5
-        ] = "https://bafkreidindqv4qkzwzfvcqd53ok2ynw2b65z4fkta4abhfrypt3f3bkpmq.ipfs.nftstorage.link/";
-        _tokenURIs[
-            6
-        ] = "https://bafkreifdov4ydqzmw2kfyuhlbje4fjgw45t4k2njhc4n4ozznc2ltlie4m.ipfs.nftstorage.link/";
-        _tokenURIs[
-            7
-        ] = "https://bafkreiemjw2mrzboobhhumlpwwhjzopgvrjgdinfdpoomegcjkgcbzx2xy.ipfs.nftstorage.link/";
-        _tokenURIs[
-            8
-        ] = "https://bafkreif2ksr6jzinmgvksdfltstge7pfcqvtparnpbduzr6w4lvv7pelqa.ipfs.nftstorage.link/";
-        _tokenURIs[
-            9
-        ] = "https://bafkreicde5fefxpzvltke3witeb3whw4lm6tobxyvyw55m6e25xwvue3xm.ipfs.nftstorage.link/";
-
+    constructor() public ERC1155("GreenNFT GN") {  
         _mint(msg.sender, GREEN, 10000, "");
         _mint(msg.sender, YELLOW, 10000, "");
         _mint(msg.sender, BLUE, 10000, "");
